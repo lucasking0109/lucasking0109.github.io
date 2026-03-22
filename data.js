@@ -19,12 +19,15 @@ const SITE_DATA = {
     experience: [
         {
             title: "Vici Holdings - AI Data Scientist Intern",
-            date: "July 2025",
+            date: "Jul 2025 - Sep 2025",
             startYear: 2025,
             startMonth: 7,
+            endYear: 2025,
+            endMonth: 9,
             description: [
-                "Applied LLMs to extract and quantify management-quality indicators from U.S. 10-K filings, focusing on disclosure consistency and governance signals, and linked them to long-term stock performance using permutation tests.",
-                "Developed a multi-agent LLM system to identify impactful news and generate M&A valuation scenarios, leading to event-driven trades in preferred stocks based on conversion terms and interest-rate reset mechanics."
+                "Engineered a Python-based NLP pipeline via the GPT-o3 API, leveraging section-aware chunking and RAG via FAISS to parse 10-K filings, applying few-shot prompting to extract management-quality indicators into structured JSON.",
+                "Validated these AI signals through rigorous ground-truth sampling and permutation tests, quantifying governance metrics to construct a quantitative portfolio that improved baseline annualized return by 16%.",
+                "Architected a multi-agent system deployed on AWS EC2, utilizing hooks and custom tool-calling (skills) to orchestrate LLM agents, generating M&A valuation scenarios that accelerated event-driven trading analysis by 50%."
             ],
             link: null
         },
@@ -36,9 +39,9 @@ const SITE_DATA = {
             endYear: 2024,
             endMonth: 7,
             description: [
-                "Developed a quantitative framework to exploit economic cycles by integrating macro indicators with fundamental screens, signal normalization, and regime-based filtering to identify trading opportunities in the U.S. equities.",
-                "Built a dynamic VaR and ES framework leveraging historical simulation and parametric methods, scenario analysis, and stress testing, improving end-of-day risk assessment and portfolio exposure decisions.",
-                "Leveraged model signals to manage an unleveraged, high-beta (Beta = 2.0) portfolio, achieved Sharpe Ratio 2.84, Information Ratio 2.23, and generated +3.63% annualized alpha against the NASDAQ benchmark."
+                "Designed data pipelines and signal normalization workflows using Pandas and PostgreSQL to integrate macroeconomic data and fundamental screens, constructing a scalable U.S. market screening framework.",
+                "Deployed an automated trading and risk management system on AWS, leveraging the IB Gateway API for live execution while integrating dynamic VaR, ES, and stress testing to monitor portfolio exposure in real-time.",
+                "Leveraged model signals to manage an unleveraged, high-beta (Beta ≈ 2.0) portfolio, achieving Sharpe Ratio 2.84, Information Ratio 2.23, and +3.63% annualized return against the NASDAQ benchmark."
             ],
             link: null
         },
@@ -50,8 +53,7 @@ const SITE_DATA = {
             endYear: 2021,
             endMonth: 5,
             description: [
-                "Developed a z-score mean-reversion model; ATR-based dynamic bands delivered +12% annual return in live trading.",
-                "Built trend-following strategies with volatility filters across Forex CFDs/time frames, forming diversified long/short portfolios; reduced portfolio volatility by 23%, raised win rate by 16%, and deployed to live trading."
+                "Engineered a robust backtesting framework using Python to evaluate historical data quality across multiple market sources, conducting rigorous out-of-sample validation to mitigate overfitting prior to live deployment."
             ],
             link: null
         }
@@ -224,6 +226,15 @@ const SITE_DATA = {
     ],
 
     competitions: [
+        {
+            title: "QRT Asset Allocation Performance Forecasting Data Challenge",
+            subtitle: "1st Place",
+            date: "Spring 2026",
+            description: [
+                "Achieved 1st place overall in the QRT Data Challenge, a global quantitative finance competition focused on forecasting asset allocation performance across multiple asset classes."
+            ],
+            image: null
+        },
         {
             title: "IMC Prosperity 3 Trading Competition",
             subtitle: "Top 1% globally (133rd/12,621)",

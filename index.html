@@ -24,50 +24,50 @@
     <!-- ========== NAVBAR ========== -->
     <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="navbar-brand" id="nav-brand"></div>
-        <div class="navbar-tabs" role="tablist" aria-label="Portfolio sections">
-            <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-about" data-tab="about">About</button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-experience" data-tab="experience">Experience</button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-education" data-tab="education">Education</button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-projects" data-tab="projects">Projects</button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-competitions" data-tab="competitions">Competitions</button>
-            <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-certificates" data-tab="certificates">Certificates</button>
+        <div class="navbar-tabs" aria-label="Portfolio sections">
+            <a class="tab-btn active" href="#about" data-nav="about">About</a>
+            <a class="tab-btn" href="#experience" data-nav="experience">Experience</a>
+            <a class="tab-btn" href="#education" data-nav="education">Education</a>
+            <a class="tab-btn" href="#projects" data-nav="projects">Projects</a>
+            <a class="tab-btn" href="#competitions" data-nav="competitions">Competitions</a>
+            <a class="tab-btn" href="#certificates" data-nav="certificates">Certificates</a>
         </div>
     </nav>
 
     <!-- ========== MAIN CONTENT ========== -->
     <main class="main-content">
 
-        <!-- About Panel -->
-        <section class="tab-panel active visible" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
+        <!-- About -->
+        <section class="section" id="about">
             <div class="about-container" id="about-content"></div>
         </section>
 
-        <!-- Experience Panel -->
-        <section class="tab-panel" id="panel-experience" role="tabpanel" aria-labelledby="tab-experience">
+        <!-- Experience -->
+        <section class="section" id="experience">
             <h2 class="section-heading">Experience</h2>
             <div class="experience-list" id="experience-content"></div>
         </section>
 
-        <!-- Education Panel -->
-        <section class="tab-panel" id="panel-education" role="tabpanel" aria-labelledby="tab-education">
+        <!-- Education -->
+        <section class="section" id="education">
             <h2 class="section-heading">Education</h2>
             <div class="education-list" id="education-content"></div>
         </section>
 
-        <!-- Projects Panel -->
-        <section class="tab-panel" id="panel-projects" role="tabpanel" aria-labelledby="tab-projects">
+        <!-- Projects -->
+        <section class="section" id="projects">
             <h2 class="section-heading">Projects</h2>
             <div class="projects-accordion" id="projects-content"></div>
         </section>
 
-        <!-- Competitions Panel -->
-        <section class="tab-panel" id="panel-competitions" role="tabpanel" aria-labelledby="tab-competitions">
+        <!-- Competitions -->
+        <section class="section" id="competitions">
             <h2 class="section-heading">Competitions</h2>
             <div class="competitions-list" id="competitions-content"></div>
         </section>
 
-        <!-- Certificates Panel -->
-        <section class="tab-panel" id="panel-certificates" role="tabpanel" aria-labelledby="tab-certificates">
+        <!-- Certificates -->
+        <section class="section" id="certificates">
             <h2 class="section-heading">Certificates</h2>
             <div class="certificates-list" id="certificates-content"></div>
         </section>
@@ -269,58 +269,51 @@
             document.getElementById('certificates-content').innerHTML = html;
         })();
 
-        // --- Tab Switching ---
-        var tabBtns = document.querySelectorAll('.tab-btn');
-        var tabPanels = document.querySelectorAll('.tab-panel');
+        // --- Smooth Scroll Navigation ---
+        var navLinks = document.querySelectorAll('.tab-btn');
 
-        function switchTab(targetTab) {
-            // Deactivate all tabs
-            for (var i = 0; i < tabBtns.length; i++) {
-                tabBtns[i].classList.remove('active');
-                tabBtns[i].setAttribute('aria-selected', 'false');
-            }
-
-            // Hide all panels
-            for (var j = 0; j < tabPanels.length; j++) {
-                tabPanels[j].classList.remove('visible');
-            }
-
-            // After fade-out transition, swap display
-            setTimeout(function () {
-                for (var k = 0; k < tabPanels.length; k++) {
-                    tabPanels[k].classList.remove('active');
-                }
-
-                // Activate target
-                var activeBtn = document.querySelector('[data-tab="' + targetTab + '"]');
-                var activePanel = document.getElementById('panel-' + targetTab);
-
-                if (activeBtn && activePanel) {
-                    activeBtn.classList.add('active');
-                    activeBtn.setAttribute('aria-selected', 'true');
-                    activePanel.classList.add('active');
-
-                    // Scroll main content to top
-                    document.querySelector('.main-content').scrollTop = 0;
-
-                    // Trigger fade-in on next frame
-                    requestAnimationFrame(function () {
-                        requestAnimationFrame(function () {
-                            activePanel.classList.add('visible');
-                        });
+        for (var i = 0; i < navLinks.length; i++) {
+            navLinks[i].addEventListener('click', function (e) {
+                e.preventDefault();
+                var targetId = this.getAttribute('data-nav');
+                var target = document.getElementById(targetId);
+                if (target) {
+                    var offset = document.querySelector('.navbar').offsetHeight;
+                    window.scrollTo({
+                        top: target.offsetTop - offset,
+                        behavior: 'smooth'
                     });
-                }
-            }, 150);
-        }
-
-        for (var i = 0; i < tabBtns.length; i++) {
-            tabBtns[i].addEventListener('click', function () {
-                var tab = this.getAttribute('data-tab');
-                if (!this.classList.contains('active')) {
-                    switchTab(tab);
                 }
             });
         }
+
+        // --- Scroll Spy ---
+        var sections = document.querySelectorAll('.section');
+        var scrollSpyTimer;
+
+        function updateActiveNav() {
+            var scrollPos = window.scrollY + document.querySelector('.navbar').offsetHeight + 40;
+
+            var currentSection = '';
+            for (var i = 0; i < sections.length; i++) {
+                if (sections[i].offsetTop <= scrollPos) {
+                    currentSection = sections[i].getAttribute('id');
+                }
+            }
+
+            for (var j = 0; j < navLinks.length; j++) {
+                navLinks[j].classList.remove('active');
+                if (navLinks[j].getAttribute('data-nav') === currentSection) {
+                    navLinks[j].classList.add('active');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', function () {
+            clearTimeout(scrollSpyTimer);
+            scrollSpyTimer = setTimeout(updateActiveNav, 10);
+        });
+        updateActiveNav();
 
         // --- Accordion Logic (Projects) ---
         var accordion = document.querySelector('.projects-accordion');
@@ -371,38 +364,6 @@
             });
         }
 
-        // --- Keyboard Navigation for Tabs ---
-        var tabContainer = document.querySelector('.navbar-tabs');
-        tabContainer.addEventListener('keydown', function (e) {
-            var currentIndex = -1;
-            for (var i = 0; i < tabBtns.length; i++) {
-                if (tabBtns[i] === document.activeElement) {
-                    currentIndex = i;
-                    break;
-                }
-            }
-            if (currentIndex === -1) return;
-
-            var newIndex = currentIndex;
-            if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
-                e.preventDefault();
-                newIndex = (currentIndex + 1) % tabBtns.length;
-            } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
-                e.preventDefault();
-                newIndex = (currentIndex - 1 + tabBtns.length) % tabBtns.length;
-            } else if (e.key === 'Home') {
-                e.preventDefault();
-                newIndex = 0;
-            } else if (e.key === 'End') {
-                e.preventDefault();
-                newIndex = tabBtns.length - 1;
-            }
-
-            if (newIndex !== currentIndex) {
-                tabBtns[newIndex].focus();
-                switchTab(tabBtns[newIndex].getAttribute('data-tab'));
-            }
-        });
 
     })();
     </script>

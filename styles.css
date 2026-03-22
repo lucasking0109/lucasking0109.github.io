@@ -1,5 +1,5 @@
 /* ============================================
-   Template A - Tab-Based Portfolio
+   Single-Page Scrollable Portfolio
    Dark Theme | Inter Font | Indigo Accent
    ============================================ */
 
@@ -32,6 +32,7 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -41,8 +42,6 @@ body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     line-height: 1.6;
-    overflow: hidden;
-    height: 100vh;
 }
 
 a {
@@ -109,6 +108,10 @@ a:hover {
     align-items: center;
 }
 
+a.tab-btn {
+    text-decoration: none;
+}
+
 .tab-btn:hover {
     color: var(--text-primary);
     background-color: rgba(99, 102, 241, 0.08);
@@ -134,43 +137,14 @@ a:hover {
 /* --- Main Content Area --- */
 .main-content {
     margin-top: var(--navbar-height);
-    height: calc(100vh - var(--navbar-height));
-    overflow-y: auto;
-    padding: 40px 32px;
-    scrollbar-width: thin;
-    scrollbar-color: var(--border-color) transparent;
+    padding: 0 32px 80px;
 }
 
-.main-content::-webkit-scrollbar {
-    width: 6px;
-}
-
-.main-content::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.main-content::-webkit-scrollbar-thumb {
-    background-color: var(--border-color);
-    border-radius: 3px;
-}
-
-/* --- Tab Panels --- */
-.tab-panel {
-    display: none;
-    opacity: 0;
-    transform: translateY(8px);
-    transition: opacity 0.35s ease, transform 0.35s ease;
+/* --- Sections --- */
+.section {
     max-width: 960px;
     margin: 0 auto;
-}
-
-.tab-panel.active {
-    display: block;
-}
-
-.tab-panel.visible {
-    opacity: 1;
-    transform: translateY(0);
+    padding-top: calc(var(--navbar-height) + 32px);
 }
 
 /* --- Section Headings --- */
@@ -203,7 +177,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - var(--navbar-height) - 80px);
+    min-height: calc(100vh - var(--navbar-height));
     text-align: center;
     padding: 0 20px;
 }
@@ -681,7 +655,7 @@ a:hover {
     }
 
     .main-content {
-        padding: 24px 16px;
+        padding: 0 16px 80px;
     }
 
     .about-name {
@@ -738,6 +712,6 @@ a:hover {
     }
 
     .about-container {
-        min-height: calc(100vh - 100px - 80px);
+        min-height: calc(100vh - 100px);
     }
 }
