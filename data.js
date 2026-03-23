@@ -11,7 +11,7 @@ const SITE_DATA = {
         ],
         social: {
             github: "https://github.com/lucasking0109",
-            linkedin: "https://www.linkedin.com/in/chun-an-chin-989686224/",
+            linkedin: "https://www.linkedin.com/in/chun-an-chin",
             email: "cchunan@bu.edu"
         }
     },
@@ -97,6 +97,7 @@ const SITE_DATA = {
     projects: [
         {
             title: "WarZone Tower Defense - Reinforcement Learning Agent",
+            tag: "ML / RL",
             date: "Mar 2026",
             description: [
                 "Reverse-engineered a Flash tower defense game by decompiling ActionScript source code and rebuilt a full Python + Pygame simulator from scratch for RL training.",
@@ -104,31 +105,37 @@ const SITE_DATA = {
                 "Discovered that behavioral cloning from just 3 human demonstrations outperformed 200+ hours of pure RL — agent achieved 165.6 waves vs. developer's record of 200."
             ],
             link: "https://github.com/lucasking0109/Warzone_Tower_Defense_RLmodel",
+            linkedin: "https://www.linkedin.com/posts/chun-an-chin_reinforcementlearning-machinelearning-gameai-activity-7437320561669746688-MMoE",
             report: null
         },
         {
             title: "BlinkAlarm - Eye Health Monitor (iOS & macOS)",
+            tag: "App",
             date: "Mar 2026",
             description: [
                 "Built a privacy-first eye health app using Apple's on-device Vision framework to monitor blink rate in real time and alert users during prolonged screen use.",
                 "Implemented adaptive EAR-based blink detection with auto-calibration (45 samples), head pose filtering, and two-level smart alerts with haptic feedback.",
                 "Developed dual-platform support: macOS menu bar app with floating alerts and screen tint, iOS with themed monitoring interfaces and Pomodoro timer."
             ],
-            link: "https://github.com/lucasking0109/blinkalarm-support",
+            link: null,
+            appStore: "https://apps.apple.com/us/app/blinkalarm/id6759943933",
             report: null
         },
         {
-            title: "Time Series Data Processing & Workflow",
+            title: "Time Series Data Pipeline",
+            tag: "Data Analysis",
             date: "Feb 2026",
             description: [
                 "Built time series data processing pipelines with workflow visualization.",
                 "Developed interactive HTML-based interfaces for time series analysis and documentation."
             ],
             link: "https://github.com/lucasking0109/TimeSeriesDataProcess",
+            linkedin: "https://www.linkedin.com/posts/chun-an-chin_quantitativeanalysis-timeseries-econometrics-activity-7426346396917706752-Vz2x",
             report: "https://lucasking0109.github.io/TimeSeriesDataProcess/"
         },
         {
             title: "Denoising Diffusion Probabilistic Models (DDPM) - Face Generation",
+            tag: "Research",
             date: "Feb 2026",
             description: [
                 "Implemented DDPM to generate synthetic 64×64 human face images using U-Net with attention mechanisms (~22M parameters) and 1000 denoising timesteps.",
@@ -136,10 +143,12 @@ const SITE_DATA = {
                 "Achieved best training loss of 0.01564 by epoch 33; generated diverse faces with varied hairstyles, skin tones after 60 epochs (~60 hours) on Apple MPS."
             ],
             link: "https://github.com/lucasking0109/DDPM_w-CelebA_Data",
+            linkedin: "https://www.linkedin.com/posts/chun-an-chin_ddpm-research-report-activity-7424318879423819778-PGE3",
             report: "https://lucasking0109.github.io/DDPM_w-CelebA_Data/report/DDPM_Research_Report.html"
         },
         {
             title: "DCGAN with CIFAR-10 - Image Generation & Mode Collapse Study",
+            tag: "Research",
             date: "Jan 2026",
             description: [
                 "Implemented Deep Convolutional GAN to generate 64×64 truck images from CIFAR-10, focusing on diagnosing and resolving mode collapse.",
@@ -147,10 +156,12 @@ const SITE_DATA = {
                 "V2 model (label smoothing + dropout + single-class training) achieved 29% improvement over baseline, demonstrating stable and diverse image generation."
             ],
             link: "https://github.com/lucasking0109/GAN_Model_w-_CIFAR_Data",
+            linkedin: "https://www.linkedin.com/posts/chun-an-chin_ganresearchreport-activity-7421058518490750976-SBrc",
             report: "https://lucasking0109.github.io/GAN_Model_w-_CIFAR_Data/DCGAN_Research_Report.html"
         },
         {
             title: "CDX Correlation Surface - Gaussian & G-VG Copula Models",
+            tag: "Research",
             date: "Nov 2025",
             description: [
                 "Analyzed CDX credit index tranche pricing using Gaussian Copula and Generalized Variance Gamma (G-VG) Copula models across 6 distinct tenors (1-10 years).",
@@ -160,17 +171,8 @@ const SITE_DATA = {
             link: "https://github.com/lucasking0109/CDX_Correlation_Surface--Gaussian-G-VG-Copula-Models"
         },
         {
-            title: "Bloomberg Options Data Fetcher",
-            date: "Oct 2025",
-            description: [
-                "Built a professional-grade tool to retrieve comprehensive options data for QQQ and its top 20 constituent stocks from Bloomberg Terminal.",
-                "Developed interactive Streamlit dashboard with real-time statistics, data preview, and Plotly visualizations.",
-                "Fetches 26 Bloomberg fields including delta, gamma, theta, vega, and implied volatility with built-in quality validation and API quota monitoring."
-            ],
-            link: "https://github.com/lucasking0109/Bloomberg-data-fetcher"
-        },
-        {
             title: "QQQ Put/Call Ratio Analysis (25-Year Study)",
+            tag: "Data Analysis",
             date: "Sep 2025",
             description: [
                 "Analyzed 6,345 daily observations of QQQ ETF and options market sentiment data from January 2000 to May 2025.",
@@ -181,6 +183,7 @@ const SITE_DATA = {
         },
         {
             title: "Automated Investment Style Classification for Mutual Fund Prospectuses Using NLP",
+            tag: "NLP",
             date: "May 2025",
             description: [
                 "Data preprocessing and tokenization.",
@@ -193,6 +196,7 @@ const SITE_DATA = {
         },
         {
             title: "Company Bankruptcy Prediction (Kaggle Competition)",
+            tag: "ML / RL",
             date: "Apr 2025",
             description: [
                 "Applied StandardScaler for feature normalization; addressed extreme class imbalance using SMOTE oversampling within each cross-validation fold.",
@@ -204,6 +208,7 @@ const SITE_DATA = {
         },
         {
             title: "High-Frequency Data Analysis & Prediction",
+            tag: "Data Analysis",
             date: "Apr 2025",
             description: [
                 "Processed 400+ stocks' 1-minute price data from Polygon.io (May 2023 - May 2025) using PySpark, converting to Parquet format.",
@@ -213,16 +218,6 @@ const SITE_DATA = {
             ],
             link: "https://github.com/lucasking0109/High-Frequency_Data_Analysis_Prediction"
         },
-        {
-            title: "U.S. Treasury Spot Yield Curve Fitting (2015-2025)",
-            date: "Mar 2025",
-            description: [
-                "Used Bloomberg 2015-2025 Treasury par yield rates, deriving Spot Yield Curve through Bootstrap method.",
-                "Applied Ho-Lee, Hull-White, Vasicek, Nelson-Siegel models, as well as LSTM, Random Forest, and Gradient Boosting Regression.",
-                "Nelson-Siegel Model showed optimal stability with potential for price prediction and trading; LSTM demonstrated very high accuracy."
-            ],
-            link: null
-        }
     ],
 
     competitions: [
@@ -233,6 +228,7 @@ const SITE_DATA = {
             description: [
                 "Achieved 1st place overall in the QRT Data Challenge, a global quantitative finance competition focused on forecasting asset allocation performance across multiple asset classes."
             ],
+            linkedin: "https://www.linkedin.com/posts/chun-an-chin_quantitativeresearch-machinelearning-assetallocation-activity-7440855367909179392-698n",
             image: null
         },
         {
@@ -243,6 +239,7 @@ const SITE_DATA = {
                 "Developed volatility-arbitrage strategies by modeling implied volatility surfaces, cross-sectional deviations, and generating dynamic Black-Scholes pricing signals to systematically exploit recurring short-term mispricing.",
                 "Exploited hidden microstructure inefficiencies across markets by optimizing limit-order placement, execution timing, and fill probabilities, capturing ~60% of theoretical arbitrage potential with minimal risk exposure."
             ],
+            linkedin: "https://www.linkedin.com/posts/chun-an-chin_imcprosperity3-algorithmictrading-quantfin-activity-7325727472359002113-WVmE",
             image: "images/imc-leaderboard.png"
         },
         {
@@ -252,6 +249,7 @@ const SITE_DATA = {
                 "Led team to 1st place in the MSMFT internal competition: Achieved 2nd place globally in the Sales & Trader Case by coordinating strategies and ensuring alignment across team members under real-time trading pressure.",
                 "Deployed market-making strategies targeting order-book imbalances and spread dynamics, systematically profiting from structural inefficiencies while avoiding directional exposure."
             ],
+            linkedin: "https://www.linkedin.com/posts/chun-an-chin_ritc2025-quantfinance-algorithmictrading-activity-7312688246260383744-XtsA",
             image: "images/rotman-ranking.png"
         }
     ],

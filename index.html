@@ -107,6 +107,18 @@
             return html;
         }
 
+        function linkedinLink(url) {
+            if (!url) return '';
+            return '<a class="card-link linkedin-link" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' +
+                   '<i class="fa-brands fa-linkedin-in"></i> View on LinkedIn</a>';
+        }
+
+        function appStoreLink(url) {
+            if (!url) return '';
+            return '<a class="card-link appstore-link" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' +
+                   '<i class="fa-brands fa-app-store-ios"></i> View on App Store</a>';
+        }
+
         function githubLink(url) {
             if (!url) return '';
             return '<a class="card-link" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' +
@@ -193,6 +205,9 @@
                 var hasBody = (item.description && item.description.length > 0) || item.link || item.report;
                 html += '<div class="accordion-item">';
                 html += '<div class="accordion-header" role="button" tabindex="0" aria-expanded="false">';
+                if (item.tag) {
+                    html += '<span class="project-tag">' + esc(item.tag) + '</span>';
+                }
                 html += '<div class="accordion-header-left">';
                 html += '<div class="accordion-title">' + esc(item.title) + '</div>';
                 html += '</div>';
@@ -206,7 +221,9 @@
                     html += buildList(item.description);
                     html += '<div class="card-links-row">';
                     html += githubLink(item.link);
+                    html += appStoreLink(item.appStore);
                     html += reportLink(item.report);
+                    html += linkedinLink(item.linkedin);
                     html += '</div>';
                     html += '</div></div>';
                 }
@@ -231,6 +248,7 @@
                 if (item.image) {
                     html += '<img class="competition-image" src="' + esc(item.image) + '" alt="' + esc(item.title) + '" loading="lazy">';
                 }
+                html += linkedinLink(item.linkedin);
                 html += '</article>';
             }
             document.getElementById('competitions-content').innerHTML = html;

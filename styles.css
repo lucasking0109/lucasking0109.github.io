@@ -350,6 +350,26 @@ a.tab-btn {
     background-color: rgba(139, 92, 246, 0.2);
 }
 
+.linkedin-link {
+    background-color: rgba(10, 102, 194, 0.1);
+    color: #0a66c2;
+}
+
+.linkedin-link:hover {
+    background-color: rgba(10, 102, 194, 0.2);
+    color: #0e7ae6;
+}
+
+.appstore-link {
+    background-color: rgba(0, 122, 255, 0.1);
+    color: #007aff;
+}
+
+.appstore-link:hover {
+    background-color: rgba(0, 122, 255, 0.2);
+    color: #3395ff;
+}
+
 .competition-image {
     width: 100%;
     max-width: 800px;
@@ -430,6 +450,22 @@ a.tab-btn {
     font-weight: 600;
     color: var(--text-primary);
     line-height: 1.4;
+}
+
+.project-tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    flex-shrink: 0;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 4px 0;
+    border-radius: 4px;
+    background-color: rgba(99, 102, 241, 0.12);
+    color: var(--accent-primary);
+    letter-spacing: 0.02em;
+    text-align: center;
 }
 
 .accordion-date {
