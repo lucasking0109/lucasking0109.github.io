@@ -23,7 +23,7 @@
           crossorigin="anonymous" referrerpolicy="no-referrer">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
 
@@ -138,6 +138,7 @@
         (function renderAbout() {
             var p = data.personal;
             var html = '';
+            html += '<img class="about-photo" src="images/profile.jpg?v=16" alt="' + esc(p.name) + '">';
             html += '<h1 class="about-name">' + esc(p.name) + '</h1>';
             html += '<p class="about-title">' + esc(p.title) + '</p>';
             var bioArr = Array.isArray(p.bio) ? p.bio : [p.bio];

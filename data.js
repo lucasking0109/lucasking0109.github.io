@@ -6,8 +6,8 @@ const SITE_DATA = {
         name: "Chun-An (Lucas) Chin",
         title: "Quantitative Researcher | Quantitative trader | Data Scientist",
         bio: [
-            "Chun-An has graduated from Boston University's MSMFT program and passed CFA Level II, with hands-on experience in quantitative research, systematic trading, and portfolio risk management. He specializes in combining macro signals, fundamental factors, and machine learning models to generate alpha across U.S. equities and derivatives markets.",
-            "His current work focuses on applying large language models and deep learning to financial forecasting, news analytics, and event-driven strategies."
+            "Quantitative researcher with an MS in Mathematical Finance from Boston University and CFA Level II passed. Specializes in combining macro signals, fundamental factors, and machine learning models to generate alpha across U.S. equities and derivatives markets. Current work focuses on applying large language models and deep learning to financial forecasting, alternatives data analytics, and event-driven strategies.",
+            "A volleyball player since college, though most of my time now goes to developing trading strategies and research — leaving less time on the court and more reminders that time flies. I'm also someone who loves finding problems in everyday life and turning them into solutions — like building BlinkAlarm, an app I created after realizing I was staring at screens 10+ hours a day and forgetting to blink."
         ],
         social: {
             github: "https://github.com/lucasking0109",

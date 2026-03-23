@@ -29,9 +29,21 @@
       "WebFetch(domain:api.github.com)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(git -C /Users/lucasking/Projects/Lucas_Life_Timeline status)",
-      "WebFetch(domain:apps.apple.com)"
+      "WebFetch(domain:apps.apple.com)",
+      "Bash(sort -t' ' -k6,7)",
+      "Bash(sort -k9)",
+      "Bash(sips -g pixelWidth -g pixelHeight -g format ~/Downloads/LF2_3185-t.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight -g format ~/Downloads/img-1227.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight -g format ~/Downloads/IMG_1227.jpg)",
+      "Bash(sips --resampleWidth 500 /Users/lucasking/Projects/Lucas_Life_Timeline/images/profile.jpg)",
+      "Bash(sips -g pixelWidth -g pixelHeight -g format \"/Users/lucasking/Library/CloudStorage/OneDrive-Personal/桌面/BU/Chin_Chun_an_photo/Chin_Chun_an_533-_336.jpg\")",
+      "Bash(open -a \"Google Chrome\" /Users/lucasking/Projects/Lucas_Life_Timeline/index.html)"
     ],
     "deny": [],
-    "ask": []
+    "ask": [],
+    "additionalDirectories": [
+      "/Users/lucasking/Downloads",
+      "/Users/lucasking/Library/CloudStorage/OneDrive-Personal/桌面/BU/Chin_Chun_an_photo"
+    ]
   }
 }
