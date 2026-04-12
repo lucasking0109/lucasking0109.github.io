@@ -25,7 +25,7 @@ const SITE_DATA = {
             endYear: 2025,
             endMonth: 9,
             description: [
-                "Engineered a Python-based NLP pipeline via the GPT-o3 API, leveraging section-aware chunking and RAG via FAISS to parse 10-K filings, applying few-shot prompting to extract management-quality indicators into structured JSON.",
+                "Developed a Python-based NLP pipeline via the GPT-o3 API, leveraging section-aware chunking and RAG via Weaviate to parse 10-K filings, applying few-shot prompting to extract management-quality indicators.",
                 "Validated these AI signals through rigorous ground-truth sampling and permutation tests, quantifying governance metrics to construct a quantitative portfolio that improved baseline annualized return by 16%.",
                 "Architected a multi-agent system deployed on AWS EC2, utilizing hooks and custom tool-calling (skills) to orchestrate LLM agents, generating M&A valuation scenarios that accelerated event-driven trading analysis by 50%."
             ],
@@ -39,8 +39,8 @@ const SITE_DATA = {
             endYear: 2024,
             endMonth: 7,
             description: [
-                "Designed data pipelines and signal normalization workflows using Pandas and PostgreSQL to integrate macroeconomic data and fundamental screens, constructing a scalable U.S. market screening framework.",
-                "Deployed an automated trading and risk management system on AWS, leveraging the IB Gateway API for live execution while integrating dynamic VaR, ES, and stress testing to monitor portfolio exposure in real-time.",
+                "Architected an end-to-end data backend using Python and PostgreSQL, engineering automated web scrapers and API pipelines to ingest and normalize macroeconomic data for a U.S. market screening framework.",
+                "Deployed a live automated trading engine on AWS, integrating the IB Gateway API alongside an interactive frontend dashboard (Streamlit) to visualize real-time portfolio exposure, VaR, ES, and stress testing.",
                 "Leveraged model signals to manage an unleveraged, high-beta (Beta ≈ 2.0) portfolio, achieving Sharpe Ratio 2.84, Information Ratio 2.23, and +3.63% annualized return against the NASDAQ benchmark."
             ],
             link: null
@@ -53,7 +53,8 @@ const SITE_DATA = {
             endYear: 2021,
             endMonth: 5,
             description: [
-                "Engineered a robust backtesting framework using Python to evaluate historical data quality across multiple market sources, conducting rigorous out-of-sample validation to mitigate overfitting prior to live deployment."
+                "Engineered a high-fidelity data pipeline by aggregating multi-vendor feeds, cross-referencing sources to scrub anomalies, and imputing missing values to establish a robust foundation for historical backtesting.",
+                "Built a research-to-execution framework using Python for strategy evaluation and MQL5 for systematic trading, leveraging rigorous out-of-sample validation to boost live portfolio stability by 14% during high-volatility regimes."
             ],
             link: null
         }
@@ -273,7 +274,8 @@ const SITE_DATA = {
             "certificates/images/cert-14.png",
             "certificates/images/cert-15.png",
             "certificates/images/cert-16.png",
-            "certificates/images/cert-17.png"
+            "certificates/images/cert-17.png",
+            "certificates/images/cert-18.png"
         ],
         categories: [
             {
@@ -288,6 +290,12 @@ const SITE_DATA = {
                     "Qualification Exam for Futures Specialist",
                     "Basic Test on Financial Markets and Professional Ethics"
                     
+                ]
+            },
+            {
+                name: "Cloud & AI",
+                items: [
+                    "AWS Certified AI Practitioner"
                 ]
             },
             {
