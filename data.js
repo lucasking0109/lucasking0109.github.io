@@ -97,6 +97,18 @@ const SITE_DATA = {
 
     projects: [
         {
+            title: "Option Scenario System - Real-Time Options Analytics Platform",
+            tag: "System",
+            date: "Jan 2026",
+            description: [
+                "Built a real-time options analytics platform that streams live bid/ask, implied volatility, and Greeks for 12 major U.S. stocks, capturing ~23,000 contracts per snapshot across expirations ranging from 1 day to over 6 months.",
+                "Developed scenario analysis that answers \"if the stock drops 3% in 2 days, how much does my position gain or lose?\" by repricing every contract with Black-Scholes and breaking down P&L into Delta, Gamma, Vega, Theta, and higher-order effects so traders can see exactly where the risk comes from.",
+                "Built an Expected Value engine using Monte Carlo simulation with GARCH(1,1) volatility forecasting to estimate the probability-weighted payoff of any option position, paired with a portfolio hedge calculator that takes existing positions and recommends specific hedges with beta-adjusted Greeks.",
+                "Full-stack deployment on AWS EC2 with FastAPI, React 19, Redis, Docker, and automated daily data archival."
+            ],
+            link: null
+        },
+        {
             title: "WarZone Tower Defense - Reinforcement Learning Agent",
             tag: "ML / RL",
             date: "Mar 2026",
