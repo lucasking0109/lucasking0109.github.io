@@ -121,8 +121,9 @@
 
         function githubLink(url) {
             if (!url) return '';
-            return '<a class="card-link" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' +
-                   '<i class="fa-brands fa-github"></i> View on GitHub</a>';
+            var isGithub = url.indexOf('github.com') !== -1;
+            var icon = isGithub ? '<i class="fa-brands fa-github"></i> View on GitHub' : '<i class="fa-solid fa-globe"></i> Visit Website';
+            return '<a class="card-link" href="' + esc(url) + '" target="_blank" rel="noopener noreferrer">' + icon + '</a>';
         }
 
         function reportLink(url) {

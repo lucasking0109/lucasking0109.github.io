@@ -104,7 +104,7 @@ const SITE_DATA = {
                 "Built a search and AI-powered legal analysis platform for Massachusetts public records appeals decisions, indexing 28,645 cases spanning 12 years (2014–2026) with full-text search, Boolean operators, and filters by year, case type, and status.",
                 "Implemented a hybrid RAG system combining BM25 keyword search with vector similarity search (text-embedding-3-small) using Reciprocal Rank Fusion, enabling AI-powered case analysis with outcome prediction and precedent matching via GPT-4.1-mini with streaming responses.",
                 "Developed a Python scraper using Playwright with 10 parallel workers to collect 27,333 case PDFs (~3.8 GB) from the MA Secretary of the Commonwealth, with automated text extraction and case outcome classification.",
-                "Deployed on Vercel with Turso (SQLite cloud + FTS5), Cloudflare R2 for PDF storage, and comprehensive security hardening — operating at near-zero cost (~$1/month)."
+                "Deployed on Vercel with Turso (SQLite cloud + FTS5), Cloudflare R2 for PDF storage, and comprehensive security hardening."
             ],
             link: "https://mapublicrecord.com",
             report: null
