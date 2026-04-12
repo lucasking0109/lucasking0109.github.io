@@ -149,17 +149,6 @@ const SITE_DATA = {
             report: "https://lucasking0109.github.io/GAN_Model_w-_CIFAR_Data/DCGAN_Research_Report.html"
         },
         {
-            title: "CDX Correlation Surface - Gaussian & G-VG Copula Models",
-            tag: "Research",
-            date: "Nov 2025",
-            description: [
-                "Analyzed CDX credit index tranche pricing using Gaussian Copula and Generalized Variance Gamma (G-VG) Copula models across 6 distinct tenors (1-10 years).",
-                "Modeled implied correlation term structure using Bloomberg market data and OIS discount curves.",
-                "Found correlation increases from ~56% (1-year) to ~65% (10-year); achieved 22-43 bps pricing accuracy for near-term tranches."
-            ],
-            link: "https://github.com/lucasking0109/CDX_Correlation_Surface--Gaussian-G-VG-Copula-Models"
-        },
-        {
             title: "Automated Investment Style Classification for Mutual Fund Prospectuses Using NLP",
             tag: "NLP",
             date: "May 2025",
