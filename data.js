@@ -123,18 +123,6 @@ const SITE_DATA = {
             report: null
         },
         {
-            title: "Time Series Data Pipeline",
-            tag: "Data Analysis",
-            date: "Feb 2026",
-            description: [
-                "Built time series data processing pipelines with workflow visualization.",
-                "Developed interactive HTML-based interfaces for time series analysis and documentation."
-            ],
-            link: "https://github.com/lucasking0109/TimeSeriesDataProcess",
-            linkedin: "https://www.linkedin.com/posts/chun-an-chin_quantitativeanalysis-timeseries-econometrics-activity-7426346396917706752-Vz2x",
-            report: "https://lucasking0109.github.io/TimeSeriesDataProcess/"
-        },
-        {
             title: "Denoising Diffusion Probabilistic Models (DDPM) - Face Generation",
             tag: "Research",
             date: "Feb 2026",
@@ -172,17 +160,6 @@ const SITE_DATA = {
             link: "https://github.com/lucasking0109/CDX_Correlation_Surface--Gaussian-G-VG-Copula-Models"
         },
         {
-            title: "QQQ Put/Call Ratio Analysis (25-Year Study)",
-            tag: "Data Analysis",
-            date: "Sep 2025",
-            description: [
-                "Analyzed 6,345 daily observations of QQQ ETF and options market sentiment data from January 2000 to May 2025.",
-                "Identified statistically significant seasonal effects (p = 0.0019); classified market into 5 distinct regimes using extreme value theory and ML.",
-                "Combined seasonal/PCR strategy delivered 31.2% annualized returns vs. 27.2% buy-and-hold; April and November identified as optimal performance months."
-            ],
-            link: "https://github.com/lucasking0109/QQQ_daily_data_w-_pcr"
-        },
-        {
             title: "Automated Investment Style Classification for Mutual Fund Prospectuses Using NLP",
             tag: "NLP",
             date: "May 2025",
@@ -206,18 +183,6 @@ const SITE_DATA = {
                 "XGBoost model achieved 0.46 F1 score on test set, demonstrating PR97 model stability."
             ],
             link: "https://github.com/lucasking0109/Bankrupcy_Prediction"
-        },
-        {
-            title: "High-Frequency Data Analysis & Prediction",
-            tag: "Data Analysis",
-            date: "Apr 2025",
-            description: [
-                "Processed 400+ stocks' 1-minute price data from Polygon.io (May 2023 - May 2025) using PySpark, converting to Parquet format.",
-                "Identified stock price anomalies by calculating VWAP and comparing statistical values across different data sources.",
-                "Built LSTM neural network for price prediction achieving R² scores of 0.75 (AAPL) and 0.84 (TSLA); generated 15+ technical indicators for feature engineering.",
-                "Conducted regression analysis proving returns don't follow normal distribution; demonstrated most stock trading volume concentrates in the last 30 minutes before market close."
-            ],
-            link: "https://github.com/lucasking0109/High-Frequency_Data_Analysis_Prediction"
         },
     ],
 
