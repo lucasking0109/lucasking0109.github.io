@@ -200,7 +200,7 @@ const SITE_DATA = {
                 "Tested Random Forest, SVM, and XGBoost, optimizing for F1 score.",
                 "XGBoost model achieved 0.46 F1 score on test set, demonstrating PR97 model stability."
             ],
-            link: "https://github.com/lucasking0109/Bankrupcy_Prediction"
+            link: "https://github.com/lucasking0109/Bankruptcy_Prediction"
         },
     ],
 
@@ -250,13 +250,13 @@ const SITE_DATA = {
             "certificates/images/cert-07.png",
             "certificates/images/cert-08.png",
             "certificates/images/cert-10.png",
-            "certificates/images/cert-12.png",
-            "certificates/images/cert-13.png",
-            "certificates/images/cert-14.png",
+            "certificates/images/cert-12.jpg",
+            "certificates/images/cert-13.jpg",
+            "certificates/images/cert-14.jpg",
             "certificates/images/cert-15.png",
-            "certificates/images/cert-16.png",
-            "certificates/images/cert-17.png",
-            "certificates/images/cert-18.png"
+            "certificates/images/cert-16.jpg",
+            "certificates/images/cert-17.jpg",
+            "certificates/images/cert-18.jpg"
         ],
         categories: [
             {
