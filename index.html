@@ -205,8 +205,9 @@
             for (var i = 0; i < items.length; i++) {
                 var item = items[i];
                 var hasBody = (item.description && item.description.length > 0) || item.link || item.report;
-                html += '<div class="accordion-item">';
-                html += '<div class="accordion-header" role="button" tabindex="0" aria-expanded="false">';
+                var isExpanded = hasBody && item.expanded === true;
+                html += '<div class="accordion-item' + (isExpanded ? ' expanded' : '') + '">';
+                html += '<div class="accordion-header" role="button" tabindex="0" aria-expanded="' + (isExpanded ? 'true' : 'false') + '">';
                 if (item.tag) {
                     html += '<span class="project-tag">' + esc(item.tag) + '</span>';
                 }
@@ -232,6 +233,15 @@
                 html += '</div>';
             }
             document.getElementById('projects-content').innerHTML = html;
+
+            // Set initial maxHeight on default-expanded items (after layout)
+            requestAnimationFrame(function () {
+                var expandedItems = document.querySelectorAll('.projects-accordion .accordion-item.expanded');
+                for (var k = 0; k < expandedItems.length; k++) {
+                    var b = expandedItems[k].querySelector('.accordion-body');
+                    if (b) b.style.maxHeight = b.scrollHeight + 'px';
+                }
+            });
         })();
 
         // --- Render Competitions ---
@@ -354,19 +364,7 @@
 
                 var isExpanded = item.classList.contains('expanded');
 
-                // Close other expanded items
-                var openItems = accordion.querySelectorAll('.accordion-item.expanded');
-                for (var j = 0; j < openItems.length; j++) {
-                    if (openItems[j] !== item) {
-                        openItems[j].classList.remove('expanded');
-                        var openBody = openItems[j].querySelector('.accordion-body');
-                        if (openBody) openBody.style.maxHeight = null;
-                        var openHeader = openItems[j].querySelector('.accordion-header');
-                        if (openHeader) openHeader.setAttribute('aria-expanded', 'false');
-                    }
-                }
-
-                // Toggle current item
+                // Toggle current item (independent open/close, no single-open enforcement)
                 if (isExpanded) {
                     item.classList.remove('expanded');
                     body.style.maxHeight = null;

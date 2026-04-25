@@ -100,6 +100,7 @@ const SITE_DATA = {
             title: "MA Public Records Search - Legal Analysis Platform",
             tag: "System",
             date: "Mar 2026",
+            expanded: true,
             description: [
                 "Built a search and AI-powered legal analysis platform for Massachusetts public records appeals decisions, indexing 28,645 cases spanning 12 years (2014–2026) with full-text search, Boolean operators, and filters by year, case type, and status.",
                 "Implemented a hybrid RAG system combining BM25 keyword search with vector similarity search (text-embedding-3-small) using Reciprocal Rank Fusion, enabling AI-powered case analysis with outcome prediction and precedent matching via GPT-4.1-mini with streaming responses.",
@@ -113,6 +114,7 @@ const SITE_DATA = {
             title: "Option Scenario System - Real-Time Options Analytics Platform",
             tag: "System",
             date: "Jan 2026",
+            expanded: true,
             description: [
                 "Built a real-time options analytics platform that streams live bid/ask, implied volatility, and Greeks for 12 major U.S. stocks, capturing ~23,000 contracts per snapshot across expirations ranging from 1 day to over 6 months.",
                 "Developed scenario analysis that answers \"if the stock drops 3% in 2 days, how much does my position gain or lose?\" by repricing every contract with Black-Scholes and breaking down P&L into Delta, Gamma, Vega, Theta, and higher-order effects so traders can see exactly where the risk comes from.",
@@ -122,22 +124,10 @@ const SITE_DATA = {
             link: null
         },
         {
-            title: "WarZone Tower Defense - Reinforcement Learning Agent",
-            tag: "ML / RL",
-            date: "Mar 2026",
-            description: [
-                "Reverse-engineered a Flash tower defense game by decompiling ActionScript source code and rebuilt a full Python + Pygame simulator from scratch for RL training.",
-                "Trained a MaskablePPO agent with 3,438-dim observations and 7,767 discrete actions across 20 experimental runs (267 hours, 209M steps, 10 parallel workers).",
-                "Discovered that behavioral cloning from just 3 human demonstrations outperformed 200+ hours of pure RL — agent achieved 165.6 waves vs. developer's record of 200."
-            ],
-            link: "https://github.com/lucasking0109/Warzone_Tower_Defense_RLmodel",
-            linkedin: "https://www.linkedin.com/posts/chun-an-chin_reinforcementlearning-machinelearning-gameai-activity-7437320561669746688-MMoE",
-            report: null
-        },
-        {
             title: "BlinkAlarm - Eye Health Monitor (iOS & macOS)",
             tag: "App",
             date: "Mar 2026",
+            expanded: true,
             description: [
                 "Built a privacy-first eye health app using Apple's on-device Vision framework to monitor blink rate in real time and alert users during prolonged screen use.",
                 "Implemented adaptive EAR-based blink detection with auto-calibration (45 samples), head pose filtering, and two-level smart alerts with haptic feedback.",
@@ -145,6 +135,20 @@ const SITE_DATA = {
             ],
             link: null,
             appStore: "https://apps.apple.com/us/app/blinkalarm/id6759943933",
+            report: null
+        },
+        {
+            title: "WarZone Tower Defense - Reinforcement Learning Agent",
+            tag: "ML / RL",
+            date: "Mar 2026",
+            expanded: true,
+            description: [
+                "Reverse-engineered a Flash tower defense game by decompiling ActionScript source code and rebuilt a full Python + Pygame simulator from scratch for RL training.",
+                "Trained a MaskablePPO agent with 3,438-dim observations and 7,767 discrete actions across 20 experimental runs (267 hours, 209M steps, 10 parallel workers).",
+                "Discovered that behavioral cloning from just 3 human demonstrations outperformed 200+ hours of pure RL — agent achieved 165.6 waves vs. developer's record of 200."
+            ],
+            link: "https://github.com/lucasking0109/Warzone_Tower_Defense_RLmodel",
+            linkedin: "https://www.linkedin.com/posts/chun-an-chin_reinforcementlearning-machinelearning-gameai-activity-7437320561669746688-MMoE",
             report: null
         },
         {
