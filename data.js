@@ -239,7 +239,7 @@ const SITE_DATA = {
     ],
 
     certificates: {
-        file: "certificates/ALL_Certificates_2026.pdf",
+        file: "",
         images: [
             "certificates/images/cert-01.png",
             "certificates/images/cert-02.png",
@@ -249,14 +249,7 @@ const SITE_DATA = {
             "certificates/images/cert-06.png",
             "certificates/images/cert-07.png",
             "certificates/images/cert-08.png",
-            "certificates/images/cert-10.png",
-            "certificates/images/cert-12.png",
-            "certificates/images/cert-13.png",
-            "certificates/images/cert-14.png",
-            "certificates/images/cert-15.png",
-            "certificates/images/cert-16.png",
-            "certificates/images/cert-17.png",
-            "certificates/images/cert-18.png"
+            "certificates/images/cert-10.png"
         ],
         categories: [
             {

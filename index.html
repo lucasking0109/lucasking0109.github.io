@@ -294,12 +294,14 @@
                 html += '<img class="cert-image" src="' + esc(certs.images[i]) + '" alt="Certificate ' + (i + 1) + '" loading="lazy">';
             }
             html += '</div>';
-            html += '<div class="cert-actions-inline">';
-            html += '<a class="card-link" href="' + esc(certs.file) + '" target="_blank" rel="noopener noreferrer">';
-            html += '<i class="fa-solid fa-file-pdf"></i> View PDF</a>';
-            html += '<a class="card-link" href="' + esc(certs.file) + '" download>';
-            html += '<i class="fa-solid fa-download"></i> Download PDF</a>';
-            html += '</div>';
+            if (certs.file) {
+                html += '<div class="cert-actions-inline">';
+                html += '<a class="card-link" href="' + esc(certs.file) + '" target="_blank" rel="noopener noreferrer">';
+                html += '<i class="fa-solid fa-file-pdf"></i> View PDF</a>';
+                html += '<a class="card-link" href="' + esc(certs.file) + '" download>';
+                html += '<i class="fa-solid fa-download"></i> Download PDF</a>';
+                html += '</div>';
+            }
             html += '</div>';
 
             document.getElementById('certificates-content').innerHTML = html;
