@@ -2,3 +2,10 @@ node_modules
 
 # Local Netlify folder
 .netlify
+
+# macOS
+.DS_Store
+
+# Resume / personal documents (do not commit to public repo)
+*.pdf
+Resume-*
