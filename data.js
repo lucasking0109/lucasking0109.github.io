@@ -4,7 +4,7 @@
 const SITE_DATA = {
     personal: {
         name: "Chun-An (Lucas) Chin",
-        title: "Quantitative Researcher | Quantitative trader | Data Scientist",
+        title: "Quantitative Researcher | AI Engineer | Data Scientist",
         bio: [
             "Quantitative researcher with an MS in Mathematical Finance from Boston University and CFA Level II passed. Specializes in combining macro signals, fundamental factors, and machine learning models to generate alpha across U.S. equities and derivatives markets. Current work focuses on applying large language models and deep learning to financial forecasting, alternatives data analytics, and event-driven strategies.",
             "A volleyball player since college, though most of my time now goes to developing trading strategies and research — leaving less time on the court and more reminders that time flies. I'm also someone who loves finding problems in everyday life and turning them into solutions — like building BlinkAlarm, an app I created after realizing I was staring at screens 10+ hours a day and forgetting to blink."
@@ -96,6 +96,20 @@ const SITE_DATA = {
     ],
 
     projects: [
+        {
+            title: "The Earnings Agent - Autonomous LLM Agent for SEC Earnings Analysis",
+            tag: "AI Agent",
+            date: "May 2026",
+            expanded: true,
+            description: [
+                "Built an autonomous Claude Sonnet 4.6 agent for 10-K/10-Q/8-K filings with four-tier hierarchical memory (working/episodic/semantic/procedural), structural self-correction, and a numeric-traceability validator — achieved 100% hallucination-free output across 41 backtest events × 5 tickers (NVDA, AAPL, MSFT, GOOGL, AMZN).",
+                "Engineered a hybrid retrieval pipeline combining Anthropic contextual chunking, BM25, and dense embeddings (text-embedding-3-small + pgvector) fused via Reciprocal Rank Fusion over 2,120 chunks from 47 SEC filings.",
+                "Designed a deterministic pre-flight retrieval injection pattern that pre-computes YoY risk-factor diffs (sentence-BERT) and a 4-query battery into the agent's priming context — lifted NVDA 10-day forward hit rate +12-17pp vs reactive-retrieval baseline.",
+                "Deployed end-to-end on AWS EC2 with a real-time SEC EDGAR watcher and SES email/Telegram notifications; ~$0.27/event and ~80s wall-clock with prompt caching + parallel tool execution. Live samples: cielee.com/work/earnings-agent."
+            ],
+            link: "https://cielee.com/work/earnings-agent",
+            report: null
+        },
         {
             title: "MA Public Records Search - Legal Analysis Platform",
             tag: "System",
