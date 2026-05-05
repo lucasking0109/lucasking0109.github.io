@@ -102,10 +102,10 @@ const SITE_DATA = {
             date: "May 2026",
             expanded: true,
             description: [
-                "Built an autonomous Claude Sonnet 4.6 agent for 10-K/10-Q/8-K filings with four-tier hierarchical memory (working/episodic/semantic/procedural), structural self-correction, and a numeric-traceability validator — achieved 100% hallucination-free output across 41 backtest events × 5 tickers (NVDA, AAPL, MSFT, GOOGL, AMZN).",
-                "Engineered a hybrid retrieval pipeline combining Anthropic contextual chunking, BM25, and dense embeddings (text-embedding-3-small + pgvector) fused via Reciprocal Rank Fusion over 2,120 chunks from 47 SEC filings.",
-                "Designed a deterministic pre-flight retrieval injection pattern that pre-computes YoY risk-factor diffs (sentence-BERT) and a 4-query battery into the agent's priming context — lifted NVDA 10-day forward hit rate +12-17pp vs reactive-retrieval baseline.",
-                "Deployed end-to-end on AWS EC2 with a real-time SEC EDGAR watcher and SES email/Telegram notifications; ~$0.27/event and ~80s wall-clock with prompt caching + parallel tool execution. Live samples: cielee.com/work/earnings-agent."
+                "Architected an autonomous LLM agent for SEC 10-K/10-Q/8-K analysis with multi-tier hierarchical memory, structural self-correction loops, and deterministic numeric-traceability validation — achieved 100% hallucination-free output across 41 backtest events × 5 tickers (NVDA, AAPL, MSFT, GOOGL, AMZN).",
+                "Designed a hybrid retrieval pipeline with context-aware chunking and multi-strategy semantic + lexical fusion over a production SEC filings corpus, addressing the brittleness of standard RAG in long-form financial documents.",
+                "Implemented a deterministic context-injection pattern that pre-computes structured year-over-year diff signals into the agent's reasoning context — lifted 10-day forward signal accuracy +12-17 percentage points over baseline RAG on NVDA backtests.",
+                "Deployed end-to-end on AWS with real-time SEC EDGAR monitoring and bilingual (EN/繁中) analyst report delivery; ~$0.27 per event and ~80s wall-clock latency via prompt caching and parallel tool execution. Live samples: cielee.com/work/earnings-agent."
             ],
             link: "https://cielee.com/work/earnings-agent",
             report: null
