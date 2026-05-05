@@ -158,8 +158,9 @@ const SITE_DATA = {
             expanded: true,
             description: [
                 "Reverse-engineered a Flash tower defense game by decompiling ActionScript source code and rebuilt a full Python + Pygame simulator from scratch for RL training.",
-                "Trained a MaskablePPO agent with 3,438-dim observations and 7,767 discrete actions across 20 experimental runs (267 hours, 209M steps, 10 parallel workers).",
-                "Discovered that behavioral cloning from just 3 human demonstrations outperformed 200+ hours of pure RL — agent achieved 165.6 waves vs. developer's record of 200."
+                "Trained a MaskablePPO agent with hybrid CNN+MLP observations (10ch × 51×31 spatial grid + 38-dim vector) and a 7,767-action masked space across 32 experimental runs in 3 phases (~500 hours, ~350M steps, 10 parallel workers on Apple MPS).",
+                "Discovered that hierarchical action abstraction — collapsing 7,767 raw actions into 9 macro strategies inspired by EA SEED's Plants vs Zombies paper — drove the single largest improvement (+23 waves), pushing the best agent to 168.6 mean / 176 max waves vs. the developer's record of 200.",
+                "Earlier insight: behavioral cloning from just 3 human demos reached 165.6 waves with a fraction of pure-RL compute, but BC+RL resume training consistently degraded — confirming that strong priors accelerate learning but don't survive fine-tuning."
             ],
             link: "https://github.com/lucasking0109/Warzone_Tower_Defense_RLmodel",
             linkedin: "https://www.linkedin.com/posts/chun-an-chin_reinforcementlearning-machinelearning-gameai-activity-7437320561669746688-MMoE",
