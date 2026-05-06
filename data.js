@@ -99,7 +99,7 @@ const SITE_DATA = {
         {
             title: "The Earnings Agent - Autonomous LLM Agent for SEC Earnings Analysis",
             tag: "AI Agent",
-            date: "May 2026",
+            date: "Apr 2026",
             expanded: true,
             description: [
                 "Architected an autonomous LLM agent for SEC 10-K/10-Q/8-K analysis with multi-tier hierarchical memory, structural self-correction loops, and deterministic numeric-traceability validation — achieved 100% hallucination-free output across 41 backtest events × 5 tickers (NVDA, AAPL, MSFT, GOOGL, AMZN).",
