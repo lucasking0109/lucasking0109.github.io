@@ -111,6 +111,32 @@ const SITE_DATA = {
             report: null
         },
         {
+            title: "HFT Optimal Execution Research on NYSE/NASDAQ Tick Data",
+            tag: "Research",
+            date: "Mar 2026",
+            expanded: true,
+            description: [
+                "Built an end-to-end research pipeline for optimal trade execution on real NYSE/NASDAQ tick data (208 equities × 14 venues × 5 days), benchmarking classical strategies — TWAP, VWAP-following, and a calibrated Almgren-Chriss model — against PPO reinforcement learning agents.",
+                "Engineered a custom multi-agent training environment by extending the ABIDES simulator with a HerderAgent class (Lux 1998 chartist model) and multi-seed Latin hypercube calibration to real AAPL stylized facts — reducing volatility autocorrelation distance by 19%.",
+                "Calibrated Almgren-Chriss baseline beat TWAP by ~5 bps median Implementation Shortfall with 21% IS variance reduction; action-capped PPO further delivered 52% variance reduction vs TWAP and a 56.4% win rate on 5-day out-of-sample evaluation."
+            ],
+            link: "https://github.com/lucasking0109/hft-optimal-execution",
+            report: null
+        },
+        {
+            title: "AIS Global Ship Tracking — Alternative Data Pipeline",
+            tag: "Research",
+            date: "Mar 2026",
+            expanded: true,
+            description: [
+                "Built a 24/7 global maritime data collection pipeline on AWS EC2, ingesting 100M+ AIS position reports over 16 days via WebSocket → SQLite (WAL) → Parquet (zstd, ~80% size reduction) with a DuckDB query layer over a 45-day rolling retention.",
+                "Developed an interactive Streamlit + PyDeck visualization for shipping flow analysis with WebGL-accelerated heatmaps, ship-type/speed/draught/flag filters, multi-day timeline at 5-min granularity, and Flag-of-Convenience detection across 19 open-registry nations.",
+                "Conducted a comparative coverage analysis vs commercial baselines (MarineTraffic ~650k vessels/day, Spire ~250k/day, this project ~32k/day), exposing a ~95% gap in offshore regions — Persian Gulf (80 vs 500+ ships), Red Sea (4 vs 200+) — proving free terrestrial AIS is insufficient for Middle East / open-ocean research without satellite augmentation."
+            ],
+            link: "https://github.com/lucasking0109/AIS-research",
+            report: null
+        },
+        {
             title: "MA Public Records Search - Legal Analysis Platform",
             tag: "System",
             date: "Mar 2026",
