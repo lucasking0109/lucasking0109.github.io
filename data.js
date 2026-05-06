@@ -254,7 +254,7 @@ const SITE_DATA = {
                 "Achieved 1st place overall in the QRT Data Challenge, a global quantitative finance competition focused on forecasting asset allocation performance across multiple asset classes."
             ],
             linkedin: "https://www.linkedin.com/posts/chun-an-chin_quantitativeresearch-machinelearning-assetallocation-activity-7440855367909179392-698n",
-            image: null
+            image: "images/qrt-leaderboard.png"
         },
         {
             title: "IMC Prosperity 3 Trading Competition",
